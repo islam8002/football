@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 
-const API_KEY = "PUT_YOUR_API_KEY_HERE";
+const API_KEY = process.env.KEY;
 
 app.get("/live", async (req, res) => {
   try {
@@ -24,3 +24,4 @@ app.get("/live", async (req, res) => {
 app.listen(3000, () => {
   console.log("Server running");
 });
+
